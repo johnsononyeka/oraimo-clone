@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oraimo Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1><img src="./img/logo.png"></h1>
+
+  <!-- Search -->
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search products..." 
+    onkeyup="searchProducts()"
+  />
+
+  <!-- Cart -->
+  <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cartCount">0</span>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h2>Smart Accessories for Smart Life</h2>
+  <p>Power • Sound • Style</p>
+</section>
+
+<!-- Products -->
+<section class="products">
+  <h3>Popular Products</h3>
+
+  <div class="grid" id="productGrid">
+
+    <div class="card" data-name="freepods audio">
+      <a href="audio.html">
+        <img src="./img/OH-915N-1360-500.webp" alt="audio" width="150%">
+      </a>
+      <!--h4>Oraimo FreePods</h4>
+      <p>₦28,500</p>
+      <div class="quantity">
+        <button onclick="changeQty(this, -1)">-</button>
+        <input type="number" value="1" min="1"/>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <button onclick="addToCart('Oraimo FreePods', 28500, this)">Add to Cart</button-->
+    </div>
+
+    <div class="card" data-name="power series">
+      <a href="power.html" alt="power">
+        <img src="./img/power.webp" alt="power">
+      </a>
+      <!--h4>Oraimo Power Bank 20K</h4>
+      <p>₦35,000</p>
+      <div class="quantity">
+        <button onclick="changeQty(this, -1)">-</button>
+        <input type="number" value="1" min="1"/>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <button onclick="addToCart('Power Bank 20K', 35000, this)">Add to Cart</button-->
+    </div>
+
+    <div class="card" data-name="smart office">
+      <a href="smartoffice.html" alt="smart & office">
+        <img src="./img/smart-office.webp" alt="watch series">
+      </a>
+      <!--h4>Oraimo Fast Charger</h4>
+      <p>₦12,000</p>
+      <div class="quantity">
+        <button onclick="changeQty(this, -1)">-</button>
+        <input type="number" value="1" min="1"/>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <button onclick="addToCart('Fast Charger', 12000, this)">Add to Cart</button-->
+    </div>
+
+    <div class="card" data-name="personal">
+      <a href="personal.html">
+        <img src="./img/personalcare.webp" alt="personal mugs">
+      </a>
+      <!--h4>Oraimo USB-C Cable</h4>
+      <p>₦4,500</p>
+      <div class="quantity">
+        <button onclick="changeQty(this, -1)">-</button>
+        <input type="number" value="1" min="1"/>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <button onclick="addToCart('USB-C Cable', 4500, this)">Add to Cart</button-->
+    </div>
+
+  </div>
+</section>
+
+<!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+  <h3>Your Cart</h3>
+  <ul id="cartItems"></ul>
+  <p class="total">Total: ₦<span id="totalPrice">0</span></p>
+  <button class="checkout" onclick="checkout()">Checkout</button>
+  <button class="close" onclick="toggleCart()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!--
+dropdown navigation menu bar
+<!- Sidebar ->
+<div class="sidebar" id="sidebar">
+  <h2>MotionUI</h2>
+  <a href="#">Dashboard</a>
+  <a href="#">Projects</a>
+  <a href="#">Analytics</a>
+  <a href="#">Settings</a>
+</div>
+<!- Toggle Button ->
+<button class="menu-btn" id="menuBtn">☰</button>
+
+<style>
+/* Sidebar */
+
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #020617;
+  padding: 30px;
+  transition: left 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: #94a3b8;
+  margin: 15px 0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: white;
+}
+
+/* Menu Button */
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #38bdf8;
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+</style>
+
+header menu
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Deals</a>
+    <a href="#">Support</a>
+  </nav>
+  
+  <style>
+    nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+  </style>
+  -->
+
+

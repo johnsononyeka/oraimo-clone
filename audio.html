@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><img src="./img/logo.png"></h1>
+
+        <!-- Search -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search products..." 
+            onkeyup="searchProducts()"
+        /> 
+
+        <!-- Cart -->
+        <div class="cart" onclick="toggleCart()">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Products -->
+    <section class="products">
+        <h3>Audio</h3>
+        
+        <div class="grid" id="productGrid">
+            <div class="card" data-name="Audio Earbuds">
+                <img src="./img/OTW-340-680-1.webp" alt="">
+                <h4>oraimo AirBuds 4 ENC True Wireless Earbuds</h4>
+                <p>₦23,400</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo AirBuds 4 Wireless Earbuds', 23400, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earbuds">
+                <img src="./img/oraimo-OpenSnap-N-OPN-372N-3.webp" alt="">
+                <h4>oraimo OpenSnap N Clip-On Open-Ear True Wireless Earbuds</h4>
+                <p>₦29,500</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo OpenSnap N Clip-On Wireless Earbuds', 29500, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earbuds">
+                <img src="./img/spacebuds-neo-otw-323.webp" alt="">
+                <h4>oraimo SpaceBuds Neo True Wireless Spatial Earbuds</h4>
+                <p>₦16,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo SpaceBuds Neo True Wireless Spatial Earbuds', 16900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earbuds">
+                <img src="./img/OTW-324-1080-b.webp" alt="">
+                <h4>oraimo SpaceBuds Lite Sound360 Anti-lost True Wireless Earbuds</h4>
+                <p>₦14,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo SpaceBuds Lite Wireless Earbuds', 14900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Headphones">
+                <img src="./img/OHP-610S-A1-680-removebg-preview.webp" alt="">
+                <h4>oraimo BoomPop25 ENC Over-Ear Wireless Headphones</h4>
+                <p>₦41,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo BoomPop25 ENC Over-Ear Wireless Headphones', 41900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Headphones">
+                <img src="./img/OHP-317-BLACK.webp" alt="">
+                <h4>oraimo BoomPop Lite ENC Over-Ear Wireless Headphones</h4>
+                <p>₦30,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo BoomPop Lite ENC Over-Ear Wireless Headphones', 30900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Headphones">
+                <img src="./img/oraimo-BoomPop-Pro-OHP-917-wireless-headphones-GREY.webp" alt="">
+                <h4>oraimo BoomPop Pro ANC Over-Ear Headphones</h4>
+                <p>₦59,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo BoomPop Pro ANC Over-Ear Headphones', 59900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Headphones">
+                <img src="./img/oraimo-Wireless-Headphones-BoomPop-N-OHP-915N-0.webp" alt="">
+                <h4>oraimo BoomPop N Wireless Hybrid Noise Cancelling Over-Ear Headphones</h4>
+                <p>₦42,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo BoomPop N Wireless HNC Over-Ear Headphones', 42000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earpiece">
+                <img src="./img/OEB-611-BLACK.webp" alt="">
+                <h4>oraimo Necklace 5 30dB Noise Cancellation & Call Vibration Earphones</h4>
+                <p>₦29,500</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Necklace 5 30dB Earphones', 29500, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earpiece">
+                <img src="./img/OEP-320C-BLACK.webp" alt="">
+                <h4>oraimo CONCH 2C Type-C In-Ear Wired Earphones</h4>
+                <p>₦3,500</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Type-C In-Ear Wired Earphones', 3500, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Earpiece">
+                <img src="./img/OEP-320S-BLACK.webp" alt="">
+                <h4>oraimo CONCH 2 Neo 3.5MM In-Ear Wired Earphones</h4>
+                <p>₦2,400</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo In-Ear Wired Earphones', 2400, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Audio Speaker">
+                <img src="./img/speaker-spacebox-pro-obs-682.webp" alt="">
+                <h4>oraimo SpaceBox Pro 80W Karaoke-Support Wireless Speaker</h4>
+                <p>₦126,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Karaoke-Support Wireless Speaker', 126900, this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

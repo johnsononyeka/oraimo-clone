@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart & Office</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><img src="./img/logo.png"></h1>
+
+        <!-- Search -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search products..." 
+            onkeyup="searchProducts()"
+        /> 
+
+        <!-- Cart -->
+        <div class="cart" onclick="toggleCart()">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Products -->
+    <section class="products">
+        <h3>Smart & Office</h3>
+        
+        <div class="grid" id="productGrid">
+            <div class="card" data-name="Smart Watch">
+                <img src="./img/OSW-807.webp" alt="">
+                <h4>oraimo Watch 6.2.04" TFT IP68 Smart Watch</h4>
+                <p>₦28,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Smart Watch', 28000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Smart Watch">
+                <img src="./img/OSW-814.webp" alt="">
+                <h4>oraimo Watch Nova 2.2.01" AMOLED IP68 Curved Touchscreen Smart Watch</h4>
+                <p>₦50,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Watch Nova AMOLED IP68 Smart Watch', 50000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Smart Watch">
+                <img src="./img/oraimo-Smart-Watch-Watch-6-Pro-OSW-807S.webp" alt="">
+                <h4>oraimo Watch 6 Pro 1.69" Full Touch Smart Watch</h4>
+                <p>₦29,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Watch 6 Pro Smart Watch', 29900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Smart Watch">
+                <img src="./img/oraimo-anti-scratch-smart-watch-watch-6r-osw-823-image.webp" alt="">
+                <h4>oraimo Watch 6R 1.39" Anti-Scratch IP68 Smart Watch</h4>
+                <p>₦26,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Watch 6R IP68 Smart Watch', 26900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Smart Watch">
+                <img src="./img/osw-42.webp" alt="">
+                <h4>oraimo Watch ER 1.43" AMOLED IP68 Smart Watch</h4>
+                <p>₦59,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Watch ER AMOLED IP68 Smart Watch', 59900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="Smart Cable">
+                <img src="./img/OCD-710CC.webp" alt="">
+                <h4>oraimo MagCable 1M 60W Type-C to Type-C Data Cable</h4>
+                <p>₦7,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo MagCable 1M 60W Type-C to Type-C Data Cable', 7000, this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><img src="./img/logo.png"></h1>
+
+        <!-- Search -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search products..." 
+            onkeyup="searchProducts()"
+        /> 
+
+        <!-- Cart -->
+        <div class="cart" onclick="toggleCart()">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Products -->
+    <section class="products">
+        <h3>Power</h3>
+        
+        <div class="grid" id="productGrid">
+            <div class="card" data-name="power bank">
+                <img src="./img/oraimo-power-bank-powernova-qf1-opb-7270q-0.webp" alt="">
+                <h4>oraimo PowerNova QF1 27000mAh 22.5W Power Bank</h4>
+                <p>₦27,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerNova 27000mAh Power Bank', 27900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/1080.webp" alt="">
+                <h4>oraimo PowerBox 400 Vision 40000mAh 22.5W Power Bank</h4>
+                <p>₦37,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerBox 400 40000mAh Power Bank', 37900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/OPB-1301-680-1.webp" alt="">
+                <h4>oraimo PowerBox 300 Lit 30000mAh 15W Power Bank</h4>
+                <p>₦35,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerBox 300 30000mAh Power Bank', 35000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/OPB-750SQ-4-Device-Charging-Fully-Charges-Phone-Up-to-11-Time-PowerJet-501-12.webp" alt="">
+                <h4>oraimo Power Jet 501 50000mAh 85W Fast Charging Power Bank</h4>
+                <p>₦55,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo Power Jet 501 50000mAh Power Bank', 55000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/oraimo-power-bank-powernova-q21-opb-7200q.webp" alt="">
+                <h4>oraimo PowerNova Q21 20000mAh 22.5W Power Bank</h4>
+                <p>₦22,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerNova 20000mAh Power Bank', 22900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/OPB-7100Q-2.webp" alt="">
+                <h4>oraimo Toast 22.5 Byte 10000mAh 22.5W Power Bank</h4>
+                <p>₦15,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo 10000mAh Power Bank', 15000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power bank">
+                <img src="./img/OPB-727SQ.webp" alt="">
+                <h4>oraimo PowerJet 130 27600mAh 130W Power Bank</h4>
+                <p>₦85,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerJet 130 Power Bank', 85000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power charger">
+                <img src="./img/OCW-7652U.webp" alt="">
+                <h4>oraimo HyperGaN 65 65W GaN Wall Charger Kit with 100W CC Cable</h4>
+                <p>₦39,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo HyperGaN 65 GaN Wall Charger Kit', 39900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power charger">
+                <img src="./img/OCW-5201U-CC54.webp" alt="">
+                <h4>oraimo PowerCube 20 Chic GaN Wall Charger Kit with Type-C to Type-C Cable</h4>
+                <p>₦35,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerCube 20 Chic GaN Wall Charger', 35000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power charger">
+                <img src="./img/OCW-1111U-L53.webp" alt="">
+                <h4>oraimo PowerCube 10 Sleek 10W Wall Charger Kit</h4>
+                <p>₦4,000</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerCube Wall Charger', 4000, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power charger">
+                <img src="./img/oraimo-travel-adapter-PowerOmni-251-OCW-T01-Black.webp" alt="">
+                <h4>oraimo PowerOmni 251 2500W Multi-Plug Travel Converter</h4>
+                <p>₦10,900</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this, -1)">-</button>
+                    <input type="number" value="1" min="1"/>
+                    <button onclick="changeQty(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('oraimo PowerOmni Travel Converter', 10900, this)">Add to Cart</button>
+            </div>
+            <div class="card" data-name="power charger">
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
